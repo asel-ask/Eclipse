@@ -52,18 +52,12 @@ import java.util.*;
 	     * @return true or false
 	     */
 	    public static boolean isIDUnique(int id){
-	    	boolean flag=false;
-	     for(int i=0;i<theBooks.size();i++) {
-	    	 if(theBooks.get(i).equals(id)) {
-	    		 flag=false;
-	    		 
-	    	 }else {
-	    		 flag=true;
-	    	 }
-	     }
-	    	
-	    	return flag;
-	     
+	    	for (Book theBook : theBooks) {
+	            if (theBook.getId() == id) {
+	                return false;
+	            }
+	        }
+	        return true;
 	    }
 
 
@@ -118,10 +112,10 @@ import java.util.*;
 	        if(isIDUnique(book.getId()) || !book.getTitle().isEmpty() || book.getPages()>0) {
 	        	theBooks.add(book);
 	        	return true;
-	        }
-	        
-	    	
+	        }else {
+	        theBooks.add(null);
 	    	return false;
+	    	}
 	    }
 
 	    /**
