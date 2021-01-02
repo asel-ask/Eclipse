@@ -16,6 +16,18 @@ public class PhoneObjects {
 		phone1.download();
 		((Iphone)phone2).download();
 		((AppleApp)phone2).download();
+		phone4.download();
+		System.out.println();
+		
+		phone1.calling(123456487);
+		phone2.calling(78946131);
+		((Phone)phone3).calling(741852963);
+		((Iphone)phone3).calling(789456123);
+		((Phone)phone4).calling(123456789);
+		
+		((Phone)phone1).calling(1234);
+		
+		
 		
 	}
 }
