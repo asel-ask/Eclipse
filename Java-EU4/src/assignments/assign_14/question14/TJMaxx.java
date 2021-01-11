@@ -23,5 +23,6 @@ public class TJMaxx {
 		 return onSaleItems;  
 	}
 	 public int regularItemsCount() {     
-		 	return -1;	 }
+		 	return -1;	
+	}
 }
